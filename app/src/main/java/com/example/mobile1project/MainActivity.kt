@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.mobile1project.ui.theme.Mobile1ProjectTheme
+import com.example.mobile1project.login.views.LoginView
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,17 +21,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             Mobile1ProjectTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Luis Angel",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    LoginView()
                 }
             }
         }
     }
 }
 
-@Composable
+@Composable // Es para una vista
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
