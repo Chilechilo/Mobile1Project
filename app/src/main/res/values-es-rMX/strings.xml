@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mobile1Project</string>
+    <string name="login_image_desc">Imagen Inicio Sesion</string>
+    <string name="email_label">Correo Electronico</string>
+    <string name="password_label">Contraseña</string>
+    <string name="login_button">Iniciar Sesion</string>
+</resources>

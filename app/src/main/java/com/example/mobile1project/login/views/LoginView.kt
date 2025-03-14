@@ -28,7 +28,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import com.example.mobile1project.R
 import androidx.compose.ui.draw.clip
-
+import androidx.compose.ui.res.stringResource
 
 
 @Composable
@@ -61,7 +61,7 @@ fun LoginView() {
         OutlinedTextField(
             value = email,
             onValueChange = { email = it },
-            label = { Text("Correo Electronico") },
+            label = { Text(stringResource(R.string.email_label)) },
             keyboardOptions = KeyboardOptions.Default.copy(
                 keyboardType = KeyboardType.Email
             ),
@@ -74,7 +74,7 @@ fun LoginView() {
         OutlinedTextField(
             value = password,
             onValueChange = { password = it },
-            label = { Text("Contraseña") },
+            label = { Text(stringResource(R.string.password_label)) },
             keyboardOptions = KeyboardOptions.Default.copy(
                 keyboardType = KeyboardType.Password
             ),
@@ -95,7 +95,7 @@ fun LoginView() {
             onClick = { /* Lógica de autenticación */ },
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Iniciar sesion")
+            Text(stringResource(R.string.login_button))
         }
     }
 }
