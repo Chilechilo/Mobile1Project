@@ -4,4 +4,11 @@
     <string name="email_label">Email</string>
     <string name="password_label">Password</string>
     <string name="login_button">Login</string>
+    <string name="enter_weight">Enter Weight (kg)</string>
+    <string name="enter_height">Enter Height (m)</string>
+    <string name="calculate_imc">Calculate BMI</string>
+    <string name="imc_normal">The patient is at a healthy weight</string>
+    <string name="imc_not_normal">The patient is NOT at a healthy weight</string>
+    <string name="title_imc_calculator">Body Max Index Calculator</string>
+    <string name="error_invalid_input">Please enter valid numeric values</string>
 </resources>

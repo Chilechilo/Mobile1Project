@@ -5,4 +5,11 @@
     <string name="email_label">Correo Electronico</string>
     <string name="password_label">Contraseña</string>
     <string name="login_button">Iniciar Sesion</string>
+    <string name="enter_weight">Ingresa peso (kg)</string>
+    <string name="enter_height">Ingresa altura (m)</string>
+    <string name="calculate_imc">Calcular IMC</string>
+    <string name="imc_normal">El paciente se encuentra en el peso adecuado</string>
+    <string name="imc_not_normal">El paciente NO se encuentra en el peso adecuado</string>
+    <string name="title_imc_calculator">Calculadora de IMC</string>
+    <string name="error_invalid_input">Ingrese valores numericos validos</string>
 </resources>
