@@ -11,4 +11,5 @@
     <string name="imc_not_normal">The patient is NOT at a healthy weight</string>
     <string name="title_imc_calculator">Body Max Index Calculator</string>
     <string name="error_invalid_input">Please enter valid numeric values</string>
+    <string name="imc_label">BMI:</string>
 </resources>

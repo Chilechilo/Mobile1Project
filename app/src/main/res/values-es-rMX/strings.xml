@@ -12,4 +12,5 @@
     <string name="imc_not_normal">El paciente NO se encuentra en el peso adecuado</string>
     <string name="title_imc_calculator">Calculadora de IMC</string>
     <string name="error_invalid_input">Ingrese valores numericos validos</string>
+    <string name="imc_label">IMC:</string>
 </resources>
