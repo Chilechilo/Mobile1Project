@@ -13,4 +13,7 @@
     <string name="title_imc_calculator">Calculadora de IMC</string>
     <string name="error_invalid_input">Ingrese valores numericos validos</string>
     <string name="imc_label">IMC:</string>
+    <string name="temp_label">Calculadora de Celsius a Fahrenheit</string>
+    <string name="enter_cel">Celsius (C°)</string>
+    <string name="calculate_temp">Calcular C° a F°</string>
 </resources>

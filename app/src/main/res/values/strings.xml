@@ -12,4 +12,7 @@
     <string name="title_imc_calculator">Body Max Index Calculator</string>
     <string name="error_invalid_input">Please enter valid numeric values</string>
     <string name="imc_label">BMI:</string>
+    <string name="temp_label">Calculator of Celsius to Fahrenheit</string>
+    <string name="enter_cel">Celsius (C°)</string>
+    <string name="calculate_temp">Calculate C° to F°</string>
 </resources>
