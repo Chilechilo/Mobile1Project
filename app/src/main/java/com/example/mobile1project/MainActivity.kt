@@ -12,6 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.mobile1project.Sum.Views.SumView
 import com.example.mobile1project.ui.theme.Mobile1ProjectTheme
+import com.example.mobile1project.IMC.views.IMCView
+import com.example.mobile1project.temperature.views.TempView
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +22,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Mobile1ProjectTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    SumView()
+                    TempView()
                 }
             }
         }
