@@ -1,4 +1,4 @@
-package com.example.mobile1project.Sum.ViewModels
+package com.example.mobile1project.ids.Sum.ViewModels
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

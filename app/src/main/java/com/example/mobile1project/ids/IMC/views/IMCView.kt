@@ -1,4 +1,4 @@
-package com.example.mobile1project.IMC.views
+package com.example.mobile1project.ids.IMC.views
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
@@ -9,7 +9,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.mobile1project.IMC.viewmodels.IMCViewModel
+import com.example.mobile1project.ids.IMC.viewmodels.IMCViewModel
 import com.example.mobile1project.R
 
 @Composable

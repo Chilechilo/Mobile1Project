@@ -10,9 +10,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.mobile1project.Sum.Views.SumView
+import com.example.mobile1project.ids.Sum.Views.SumView
 import com.example.mobile1project.ui.theme.Mobile1ProjectTheme
-import com.example.mobile1project.IMC.views.IMCView
+import com.example.mobile1project.ids.IMC.views.IMCView
+import com.example.mobile1project.navigation.TabBarNavigationView
 import com.example.mobile1project.temperature.views.TempView
 
 class MainActivity : ComponentActivity() {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             Mobile1ProjectTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    TempView()
+                    TabBarNavigationView()
                 }
             }
         }

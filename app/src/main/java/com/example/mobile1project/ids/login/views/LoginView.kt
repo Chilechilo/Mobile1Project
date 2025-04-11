@@ -1,4 +1,4 @@
-package com.example.mobile1project.login.views
+package com.example.mobile1project.ids.login.views
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding

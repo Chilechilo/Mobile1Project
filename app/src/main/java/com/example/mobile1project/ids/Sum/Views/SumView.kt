@@ -1,4 +1,4 @@
-package com.example.mobile1project.Sum.Views
+package com.example.mobile1project.ids.Sum.Views
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -8,7 +8,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.sp
-import com.example.mobile1project.Sum.ViewModels.SumViewModel
+import com.example.mobile1project.ids.Sum.ViewModels.SumViewModel
 
 @Composable
 fun SumView(viewModel: SumViewModel = viewModel()) {

@@ -1,4 +1,4 @@
-package com.example.mobile1project.IMC.viewmodels
+package com.example.mobile1project.ids.IMC.viewmodels
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel

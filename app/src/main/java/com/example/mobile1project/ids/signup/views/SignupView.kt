@@ -1,4 +1,4 @@
-package com.example.mobile1project.signup.views
+package com.example.mobile1project.ids.signup.views
 
 import androidx.compose.runtime.Composable
 
