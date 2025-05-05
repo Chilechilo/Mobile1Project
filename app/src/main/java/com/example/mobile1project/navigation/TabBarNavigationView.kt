@@ -16,6 +16,7 @@ import com.example.mobile1project.ids.Sum.Views.SumView
 import com.example.mobile1project.ids.login.views.LoginView
 import com.example.mobile1project.secondpartial.SecondPartialView
 import com.example.mobile1project.temperature.views.TempView
+import com.example.mobile1project.thirdpartial.Student.views.StudentView
 import com.example.mobile1project.thirdpartial.ThirdPartialView
 
 @Composable
@@ -55,11 +56,13 @@ fun TabBarNavigationView(navController: NavHostController = rememberNavControlle
             composable(ScreenNavigation.Ids.route) { IdsView(navController) }
             composable(ScreenNavigation.FirstPartial.route) { FirstPartialView() }
             composable(ScreenNavigation.SecondPartial.route) { SecondPartialView() }
-            composable(ScreenNavigation.ThirdPartial.route) { ThirdPartialView() }
+            composable(ScreenNavigation.ThirdPartial.route) { ThirdPartialView(navController) }
             composable(ScreenNavigation.IMC.route) { IMCView() }
             composable(ScreenNavigation.Login.route) { LoginView() }
             composable(ScreenNavigation.Sum.route) { SumView() }
             composable(ScreenNavigation.Temperature.route) { TempView() }
+            composable(ScreenNavigation.StudentList.route) { StudentView() }
+
         }
     }
 }
