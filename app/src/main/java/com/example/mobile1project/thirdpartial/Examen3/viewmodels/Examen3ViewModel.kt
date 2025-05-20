@@ -1,5 +1,6 @@
 package com.example.mobile1project.thirdpartial.Examen3.viewmodels
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.mobile1project.thirdpartial.Examen3.Examen3ApiService
@@ -32,8 +33,8 @@ class Examen3ViewModel : ViewModel() {
                 _students.value = repository.fetchStudents()
             } catch (e: HttpException) {
                 _errorMessage.value = when (e.code()) {
-                    404 -> "Error 404: No encontrado"
-                    500 -> "Error 500: Error del servidor"
+                    404 -> Log.d("Error 404", "Error 404 No encontrado").toString()
+                    500 -> Log.d("Error 500", "Error 500 Error Servidor").toString()
                     else -> "Error HTTP: ${e.message()}"
                 }
             } catch (e: IOException) {
