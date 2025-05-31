@@ -3,23 +3,34 @@ package com.example.mobile1project.navigation
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavHost
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.*
-import androidx.navigation.compose.rememberNavController
-import com.example.mobile1project.ids.IdsView
 import com.example.mobile1project.firstpartial.FirstPartialView
+import com.example.mobile1project.ids.IdsView
 import com.example.mobile1project.ids.IMC.views.IMCView
 import com.example.mobile1project.ids.Sum.Views.SumView
 import com.example.mobile1project.ids.login.views.LoginView
+import com.example.mobile1project.navigation.ScreenNavigation
 import com.example.mobile1project.secondpartial.SecondPartialView
 import com.example.mobile1project.temperature.views.TempView
 import com.example.mobile1project.thirdpartial.Examen3.views.Examen3Screen
 import com.example.mobile1project.thirdpartial.Location.LocationListScreen
+import com.example.mobile1project.thirdpartial.Restaurants.viewmodels.RestaurantsViewModel
+import com.example.mobile1project.thirdpartial.Restaurants.views.RestaurantDetailsView
+import com.example.mobile1project.thirdpartial.Restaurants.views.RestaurantsScreen
 import com.example.mobile1project.thirdpartial.Student.views.StudentView
 import com.example.mobile1project.thirdpartial.ThirdPartialView
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavType
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
+import java.net.URLDecoder
+import java.nio.charset.StandardCharsets
 
 @Composable
 fun TabBarNavigationView(navController: NavHostController = rememberNavController()) {
@@ -66,6 +77,23 @@ fun TabBarNavigationView(navController: NavHostController = rememberNavControlle
             composable(ScreenNavigation.StudentList.route) { StudentView() }
             composable(ScreenNavigation.Locations.route) { LocationListScreen() }
             composable(ScreenNavigation.Examen3.route) { Examen3Screen() }
+            composable(ScreenNavigation.Restaurants.route) { RestaurantsScreen(navController) }
+            composable(
+                route = "restaurantDetail/{restaurantName}",
+                arguments = listOf(navArgument("restaurantName") { type = NavType.StringType })
+            ) { backStackEntry ->
+                val restaurantNameEncoded = backStackEntry.arguments?.getString("restaurantName") ?: ""
+                val restaurantName = URLDecoder.decode(restaurantNameEncoded, StandardCharsets.UTF_8.name())
+                val viewModel: RestaurantsViewModel = viewModel()
+                val restaurantList = viewModel.restaurants.collectAsState().value
+                val restaurant = restaurantList.find { it.name == restaurantName }
+
+                restaurant?.let {
+                    RestaurantDetailsView(it)
+                } ?: run {
+                    Text(text = "Restaurante no encontrado", modifier = Modifier.padding(16.dp))
+                }
+            }
 
         }
     }
